@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "843746703128",
+    "project_id": "mytask-bf40a",
+    "storage_bucket": "mytask-bf40a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843746703128:android:ee265204d4934f7a76106d",
+        "android_client_info": {
+          "package_name": "com.example.cares_task"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXPP4PrnAZr-Zs3Z45048lT1iEkNSUW88"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
