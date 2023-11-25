@@ -1,4 +1,4 @@
-# cares_task
+# Task-based Round of Interactive Cares (Flutter)
 
 A new Flutter project.
 
