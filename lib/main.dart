@@ -1,5 +1,6 @@
-import 'package:cares_task/core/features/auth/login_screen.dart';
-import 'package:cares_task/core/features/auth/singUp_screen.dart';
+
+import 'package:cares_task/core/features/crud/insert_screen.dart';
+import 'package:cares_task/core/features/nav/nav_screen.dart';
 import 'package:cares_task/core/features/splash/splash_screen.dart';
 import 'package:cares_task/core/theme/app_theme.dart';
 import 'package:cares_task/core/utils/hexcolor.dart';
@@ -12,10 +13,16 @@ import 'package:oktoast/oktoast.dart';
 import 'package:upgrader/upgrader.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+import 'package:timezone/data/latest.dart' as tz;
+import 'package:timezone/timezone.dart' as tz;
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:app_settings/app_settings.dart';
+
 
 void main() async {
 
   await GetStorage.init();
+
 
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
@@ -25,8 +32,8 @@ void main() async {
   runApp(const MyApp());
 
   configLoading();
-}
 
+}
 
 
 void configLoading() {
@@ -51,7 +58,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: AppTheme.lightTheme(),
         themeMode: ThemeMode.light,
-        home:SplashScreen(),
+        home: SplashScreen(),
         builder: EasyLoading.init(),
       ),
     );

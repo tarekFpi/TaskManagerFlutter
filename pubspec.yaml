@@ -54,6 +54,13 @@ dependencies:
   firebase_auth: ^4.14.1
   firebase_storage: ^11.5.2
   youtube_player_flutter: ^8.1.2
+  firebase_database: ^10.4.0
+  datetime_picker_formfield_new: ^2.1.0
+  cloud_firestore: ^4.14.0
+  firebase_analytics: ^10.8.0
+  flutter_local_notifications: ^9.7.0
+  app_settings: ^5.1.1
+  firebase_messaging: ^14.7.10
 
 
 dev_dependencies:

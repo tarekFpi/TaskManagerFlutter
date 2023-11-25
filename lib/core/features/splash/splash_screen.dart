@@ -1,7 +1,6 @@
 import 'dart:async';
-import 'package:cares_task/core/features/auth/auth_controller.dart';
-import 'package:cares_task/core/features/auth/login_screen.dart';
-import 'package:cares_task/core/features/home/home_screen.dart';
+import 'package:cares_task/core/features/crud/crud_controller.dart';
+import 'package:cares_task/core/features/nav/home/home_screen.dart';
 import 'package:cares_task/core/utils/hexcolor.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
@@ -20,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
 final storage = GetStorage();
 
-final authController = Get.put(AuthController());
+final authController = Get.put(CrudController());
 
 
   @override
@@ -35,15 +34,7 @@ void checkAuthState() async {
 
   Timer(Duration(seconds: 3), () {
 
-    if(authController.auth.currentUser != null){
-
-      Get.offAll(() => HomeScreen());
-
-    }else{
-
-      Get.offAll(() => LoginScreen());
-
-    }
+    Get.offAll(() => HomeScreen());
   });
 
 }
@@ -70,7 +61,7 @@ void checkAuthState() async {
                   height:300,
                   child: Lottie.asset("assets/animation/tracking.json")
               ),
-              Text("Task-based Round of Interactive Cares".tr,style: TextStyle(fontSize: 18,color: HexColor('#855EA9'),fontWeight: FontWeight.bold,),
+              Text("Task-Management Apps".tr,style: TextStyle(fontSize: 18,color: HexColor('#855EA9'),fontWeight: FontWeight.bold,),
                 textAlign: TextAlign.center,),
             ],
           ),
