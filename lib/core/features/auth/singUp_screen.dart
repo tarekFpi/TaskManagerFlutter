@@ -58,12 +58,15 @@ class _SingUpScreenState extends State<SingUpScreen> {
                 children: [
 
                   SizedBox(
-                    height: 30,
+                    height: 24,
                   ),
                   Align(
                       alignment: Alignment.center,
-                      child: Lottie.asset("assets/animation/login.json",width: 300, height: 200)),
+                      child: Lottie.asset("assets/animation/otp.json",width: 300, height: 200)),
 
+                  SizedBox(
+                    height: 12,
+                  ),
                   Text(
                     "User Register",
                     style: textTheme.titleMedium?.copyWith(
@@ -172,28 +175,32 @@ class _SingUpScreenState extends State<SingUpScreen> {
                           height: 16,
                         ),
 
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "I Have Alrady An Account",
+                        InkWell(
+                          focusColor: Colors.black12,
+                          onTap: (){
+                            Get.off(LoginScreen());
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "I Have Alrady An Account",
+                                ),
+                                SizedBox(
+                                  width: 8,
+                                ),
+                                Text(
+                                  "SignIn",
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      color: Colors.red,
+                                      fontWeight: FontWeight.w700),
+                                )
+                              ],
                             ),
-                            SizedBox(
-                              width: 8,
-                            ),
-                            GestureDetector(
-                              onTap: () {
-                                Get.off(LoginScreen());
-                              },
-                              child: Text(
-                                "SignIn",
-                                style: TextStyle(
-                                    fontSize: 15,
-                                    color: Colors.red,
-                                    fontWeight: FontWeight.w700),
-                              ),
-                            )
-                          ],
+                          ),
                         )
                       ],
                     ),

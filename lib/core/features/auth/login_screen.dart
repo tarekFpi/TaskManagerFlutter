@@ -85,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
 
               SizedBox(
-              height: 30,
+              height: 24,
               ),
               Align(
                 alignment: Alignment.center,
@@ -228,29 +228,33 @@ class _LoginScreenState extends State<LoginScreen> {
                     SizedBox(
                       height: 16,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "I Have Not Account !",
-                        ),
-                        SizedBox(
-                          width: 8,
-                        ),
-                        GestureDetector(
-                          onTap: () {
 
-                            Get.off(SingUpScreen());
-                          },
-                          child: Text(
-                            "Register",
-                            style: TextStyle(
-                                fontSize: 15,
-                                color: Colors.red,
-                                fontWeight: FontWeight.w700),
-                          ),
-                        )
-                      ],
+                    InkWell(
+                     focusColor: Colors.black12,
+                      onTap: (){
+                        Get.off(SingUpScreen());
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "I Have Not Account !",
+                            ),
+                            SizedBox(
+                              width: 8,
+                            ),
+                            Text(
+                              "Register",
+                              style: TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.red,
+                                  fontWeight: FontWeight.w700),
+                            )
+                          ],
+                        ),
+                      ),
                     ),
                   ],
                 ),
