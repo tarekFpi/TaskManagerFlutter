@@ -240,7 +240,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              "I Have Not Account !",
+                              "I have not account !",
                             ),
                             SizedBox(
                               width: 8,

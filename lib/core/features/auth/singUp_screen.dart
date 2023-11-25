@@ -186,7 +186,7 @@ class _SingUpScreenState extends State<SingUpScreen> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  "I Have Alrady An Account",
+                                  "I have alrady an account ?",
                                 ),
                                 SizedBox(
                                   width: 8,
