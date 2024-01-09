@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:cares_task/core/features/crud/crud_controller.dart';
 import 'package:cares_task/core/features/nav/home/home_screen.dart';
+import 'package:cares_task/core/features/nav/nav_screen.dart';
 import 'package:cares_task/core/utils/hexcolor.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
@@ -17,11 +18,6 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
 
 
-final storage = GetStorage();
-
-final authController = Get.put(CrudController());
-
-
   @override
   void initState() {
 
@@ -34,7 +30,7 @@ void checkAuthState() async {
 
   Timer(Duration(seconds: 3), () {
 
-    Get.offAll(() => HomeScreen());
+    Get.offAll(() => NavScreen());
   });
 
 }
@@ -61,7 +57,7 @@ void checkAuthState() async {
                   height:300,
                   child: Lottie.asset("assets/animation/tracking.json")
               ),
-              Text("Task-Management Apps".tr,style: TextStyle(fontSize: 18,color: HexColor('#855EA9'),fontWeight: FontWeight.bold,),
+              Text("Task-Management Apps",style: TextStyle(fontSize: 18,color: HexColor('#855EA9'),fontWeight: FontWeight.bold,),
                 textAlign: TextAlign.center,),
             ],
           ),

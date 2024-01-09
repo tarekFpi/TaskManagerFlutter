@@ -21,8 +21,6 @@ import 'package:app_settings/app_settings.dart';
 
 void main() async {
 
-  await GetStorage.init();
-
 
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
