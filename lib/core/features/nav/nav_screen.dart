@@ -17,8 +17,8 @@ class _NavScreenState extends State<NavScreen> {
 
 
   List<Widget> pages =   [
-    HomeScreen(),
-    InsertScreen(),
+    const HomeScreen(),
+    const InsertScreen(),
   ];
 
   @override

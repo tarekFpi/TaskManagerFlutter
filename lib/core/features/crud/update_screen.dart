@@ -166,7 +166,7 @@ class _UpdateScreenState extends State<UpdateScreen> {
                             decoration: InputDecoration(
                               fillColor: Colors.white38,
                               filled: true,
-                              contentPadding: EdgeInsets.all(32),
+                              contentPadding: const EdgeInsets.all(32),
                               hintText: "Enter task details",
                               prefixIcon: Icon(Icons.task,color: HexColor('#855EA9'),),
                             ),

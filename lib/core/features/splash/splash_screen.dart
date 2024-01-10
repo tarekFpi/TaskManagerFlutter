@@ -28,9 +28,9 @@ class _SplashScreenState extends State<SplashScreen> {
 
 void checkAuthState() async {
 
-  Timer(Duration(seconds: 3), () {
+  Timer(const Duration(seconds: 3), () {
 
-    Get.offAll(() => NavScreen());
+    Get.offAll(() => const NavScreen());
   });
 
 }
@@ -52,7 +52,7 @@ void checkAuthState() async {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
+              SizedBox(
                   width: double.infinity,
                   height:300,
                   child: Lottie.asset("assets/animation/tracking.json")
